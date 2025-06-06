@@ -14,7 +14,7 @@ export default function Navbar() {
         <span className="highlight">Nathally</span> Neves
       </div>
 
-      <nav className={menuOpen ? "nav-links open" : "nav-links"}>
+      <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
         <ul>
           <li><a href="#home" onClick={closeMenu}>Início</a></li>
           <li><a href="#about" onClick={closeMenu}>Sobre</a></li>
