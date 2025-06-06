@@ -1,0 +1,135 @@
+/* About.css */
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.text-area {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.text-area h2 {
+  font-size: 2.5rem;
+  color: #6c2bd9;
+  margin-bottom: 0.5rem;
+}
+
+.text-area hr {
+  width: 60px;
+  height: 3px;
+  background-color: #6c2bd9;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+.text-area p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.text-area strong {
+  color: #000;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.badge i.icon {
+  background-color: #6c2bd9;
+  color: #fff;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.cards-area {
+  flex: 1 1 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  min-width: 300px;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #f9f5ff, #f8f7fd);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i.icon {
+  background-color: #6c2bd9;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.card h4 {
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.cta-area {
+  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #6c2bd9, #3a0ca3);
+  border-radius: 12px;
+  color: #fff;
+}
+
+.cta-area h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.cta-area p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.cta-area button {
+  background-color: #fff;
+  color: #6c2bd9;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-area button:hover {
+  background-color: #f3e8ff;
+}
