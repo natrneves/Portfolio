@@ -1,0 +1,246 @@
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom right, #fafafa, #f3e8ff);
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-title h2 {
+  font-size: 32px;
+  color: #4c1d95;
+  font-weight: 700;
+}
+
+.contact-title p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch; /* estica ambos os lados */
+  flex-wrap: wrap;
+}
+
+/* Esquerda */
+.contact-info {
+  flex: 1;
+  min-width: 340px;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-card-icon {
+  background-color: #ede9fe;
+  color: #7c3aed;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.contact-card-content h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.contact-card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Box: Por que trabalhar comigo */
+.work-reasons {
+  background: linear-gradient(135deg, #a855f7, #3b0764);
+  color: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.work-reasons h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.work-reasons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-reasons li {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.work-reasons li svg {
+  font-size: 20px;
+}
+
+.work-reasons li span {
+  font-size: 13px;
+  color: #e0e0e0;
+  margin-top: 4px;
+}
+
+/* Direita */
+.contact-form {
+  flex: 1.3;
+  min-width: 360px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-header h2 {
+  font-size: 22px;
+  color: #5b21b6;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  color: #333;
+  transition: border 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #a855f7;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+button {
+  background: linear-gradient(to right, #a855f7, #3b0764);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #9333ea, #4c1d95);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease forwards;
+}

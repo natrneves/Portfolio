@@ -1,45 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
 .hero {
-  height: 100vh; /* ocupa toda a altura da tela */
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 5rem;
-  background: linear-gradient(to bottom right, #f8f2ff, #ffffff);
+  align-items: center;
+  padding: 4rem 6rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfbff;
 }
 
 .hero-text {
-  max-width: 600px;
-  color:#666;
+  max-width: 50%;
 }
 
-.hero h1 {
-  font-size: 3rem;
+.status {
+  display: inline-block;
+  background-color: #f4edff;
+  color: #8a4fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  color: #666;
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 strong {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(90deg, #a78bfa, #6b46c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .hero-buttons {
-  margin-top: 2rem;
   display: flex;
   gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.hero-buttons button:first-child {
+  background: linear-gradient(90deg, #a78bfa, #6b46c1);
+  color: white;
+}
+
+.hero-buttons button:last-child {
+  background: white;
+  border: 1px solid #ccc;
+  color: #333;
 }
 
 .hero-icons {
-  margin-top: 2rem;
   display: flex;
   gap: 1rem;
 }
 
 .hero-icons a {
-  font-size: 1.5rem;
-  color: #6e42ca;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  color: #555;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
 }
 
 .hero-icons a:hover {
   transform: scale(1.1);
 }
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image > div {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+

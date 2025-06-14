@@ -1,0 +1,160 @@
+.projects-section {
+  padding: 80px 20px;
+  background: radial-gradient(circle at 20% 40%, #7f3ff2 0%, transparent 50%),
+              radial-gradient(circle at 80% 30%, #c084fc 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, #8b5cf6 0%, transparent 50%),
+              #2e1065;
+  background-blend-mode: screen;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #c084fc, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title hr {
+  width: 80px;
+  border: 2px solid #fff;
+  margin: 10px auto;
+}
+
+.section-title p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  margin-top: 0.5rem;
+}
+
+.featured-title {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: linear-gradient(180deg, #3a0b5c, #54107a);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h4 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.project-header .year {
+  color: #dddddd;
+  font-size: 0.9rem;
+}
+
+.card-content p {
+  margin: 10px 0;
+  color: #e8e8e8;
+}
+
+.tags {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #ffffff1a;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  margin: 5px 5px 0 0;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #c084fc, #a855f7);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #a855f7, #7c3aed);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #4c148b;
+}
