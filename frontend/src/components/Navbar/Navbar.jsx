@@ -1,17 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
+ useEffect(() => {
+  const handleScroll = () => {
+    const scrollY = window.scrollY || window.pageYOffset;
+    console.log("ScrollY:", scrollY);
+    setIsScrolled(scrollY > 50);
+  };
+
+  handleScroll(); // força o estado inicial
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
   return (
-    <header className="navbar">
-      <div className="logo">
-        <span className="highlight">Nathally</span> Neves
+    <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+      <div className="logo" onClick={closeMenu}>
+         <span className="nathally">Nathally</span> <span className="neves">Neves</span>
       </div>
 
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>

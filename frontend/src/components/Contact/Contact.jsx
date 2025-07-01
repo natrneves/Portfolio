@@ -1,9 +1,32 @@
+import { useState } from 'react';
 import { Mail, MapPin, CheckCircle } from 'lucide-react';
 import './Contact.css';
 
 export default function Contact() {
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      await fetch('https://formspree.io/f/mldnzbqv', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      setStatus('Mensagem enviada com sucesso!');
+      form.reset();
+    } catch (error) {
+      setStatus('Ocorreu um erro. Tente novamente.');
+    }
+  };
+
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       {/* Título da seção */}
       <div className="contact-title fade-in-up">
         <h2>Vamos trabalhar juntos?</h2>
@@ -39,18 +62,18 @@ export default function Contact() {
             <ul>
               <li>
                 <CheckCircle />
-                Qualidade garantida
-                <span>Projetos entregues com alto padrão e precisão.</span>
+                Design centrado no usuário
+                <span>Interfaces bonitas, funcionais e focadas na experiência.</span>
               </li>
               <li>
                 <CheckCircle />
-                Suporte constante
-                <span>Acompanhamento do início ao pós-lançamento.</span>
+                Acompanhamento próximo
+                <span>Do briefing à entrega, com comunicação clara e constante.</span>
               </li>
               <li>
                 <CheckCircle />
-                Soluções personalizadas
-                <span>Software feito sob medida para seu negócio.</span>
+                Do design à entrega digital
+                <span>Seja em WordPress, React ou outra solução, transformo boas ideias em experiências digitais reais e funcionais.</span>
               </li>
             </ul>
           </div>
@@ -62,14 +85,15 @@ export default function Contact() {
             <h2>Vamos conversar sobre sua ideia?</h2>
             <p>Preencha o formulário e entraremos em contato em até 48h.</p>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-row">
-              <input type="text" placeholder="Nome" required />
-              <input type="email" placeholder="E-mail" required />
+              <input type="text" name="nome" placeholder="Nome" required />
+              <input type="email" name="email" placeholder="E-mail" required />
             </div>
-            <input type="text" placeholder="Assunto" required />
-            <textarea placeholder="Mensagem" required></textarea>
+            <input type="text" name="assunto" placeholder="Assunto" required />
+            <textarea name="mensagem" placeholder="Mensagem" required></textarea>
             <button type="submit">Enviar mensagem</button>
+            {status && <p className="form-status">{status}</p>}
           </form>
         </div>
       </div>

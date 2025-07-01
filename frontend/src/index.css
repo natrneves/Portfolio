@@ -1,8 +1,23 @@
-:root {
+/* Correção completa para habilitar scroll e manter design */
 
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Evita conflitos com cores e esquema de tema */
+:root {
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -10,39 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-
-
-
-
-
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
+
 a:hover {
   color: #535bf2;
-}
-
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: sans-serif;
-}
-
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -56,23 +50,32 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Respeita tema claro */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
+
   button {
     background-color: #f9f9f9;
   }
+
+  a:hover {
+    color: #747bff;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }

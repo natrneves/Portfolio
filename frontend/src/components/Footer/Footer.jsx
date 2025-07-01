@@ -40,14 +40,14 @@ export default function Footer() {
         {/* Coluna 3 */}
         <div className="footer-column">
           <h4>Contato</h4>
-          <p><strong>Email</strong><br /><a href="mailto:nathally@email.com">nathally@email.com</a></p>
-          <p><strong>Localização</strong><br />São Paulo, SP</p>
+          <p><strong>Email</strong><br /><a href="mailto:nathally@email.com">nathallyr06@gmail.com</a></p>
+          <p><strong>Localização</strong><br />Criciúma, SC</p>
           <p><strong>Disponibilidade</strong><br />Aberta para novos projetos</p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Nathally Neves. Feito com <span>❤</span> e muito código.</p>
+        <p>© 2025 Nathally Neves. Todos os direitos reservados.</p>
         <a href="#top">Voltar ao topo ↑</a>
       </div>
     </footer>

@@ -1,185 +1,139 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Code, Palette, Database, Wrench } from "lucide-react";
 import "./Skills.css";
 
 function Skills() {
-  return (
-    <section className="skills" id="skills">
-      <h2 className="section-title">Minhas Habilidades</h2>
-      <p className="section-subtitle">
-        Tecnologias e ferramentas que domino, sempre em constante evolução
-      </p>
+  const [animated, setAnimated] = useState(false);
+  const sectionRef = useRef(null);
 
-      <div className="skills-grid">
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimated(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const getWidthStyle = (width) => (animated ? { width } : { width: "0%" });
+  const getLiClass = () => (animated ? "skill-item show" : "skill-item");
+
+  return (
+    <section className="skills" id="skills" ref={sectionRef}>
+      <div className="skills-header">
+        <h2 className="section-title">Minhas Habilidades</h2>
+        <p className="section-subtitle">
+          Tecnologias e ferramentas que domino, sempre em constante evolução
+        </p>
+      </div>
+
+      <div className="skills-columns">
         {/* Frontend */}
-        <div className="skill-card">
-          <div className="skill-icon">F</div>
-          <h3 className="card-title">Frontend</h3>
+        <div className="skills-column">
+          <h3 className="column-title">
+            <Code size={20} /> Frontend
+          </h3>
           <ul>
-            <li>
-              <div className="skill-row">
-                <span>HTML/CSS</span>
-                <span>90%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "90%" }}></div>
+            <li className={getLiClass()}>
+              HTML/CSS
+              <div className="bar front">
+                <div style={getWidthStyle("90%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>JavaScript</span>
-                <span>80%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "80%" }}></div>
+            <li className={getLiClass()}>
+              JavaScript
+              <div className="bar front">
+                <div style={getWidthStyle("80%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>React</span>
-                <span>75%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "75%" }}></div>
+            <li className={getLiClass()}>
+              React
+              <div className="bar front">
+                <div style={getWidthStyle("75%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>TypeScript</span>
-                <span>70%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "70%" }}></div>
+            <li className={getLiClass()}>
+              Responsividade 
+              <div className="bar front">
+                <div style={getWidthStyle("80%")} />
               </div>
             </li>
           </ul>
         </div>
 
         {/* Design */}
-        <div className="skill-card">
-          <div className="skill-icon">D</div>
-          <h3 className="card-title">Design</h3>
+        <div className="skills-column">
+          <h3 className="column-title">
+            <Palette size={20} /> Design
+          </h3>
           <ul>
-            <li>
-              <div className="skill-row">
-                <span>Figma</span>
-                <span>95%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "95%", backgroundColor: "#4b5563" }}></div>
+            <li className={getLiClass()}>
+              Design Visual
+              <div className="bar design">
+                <div style={getWidthStyle("95%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>Adobe XD</span>
-                <span>85%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "85%", backgroundColor: "#4b5563" }}></div>
+            <li className={getLiClass()}>
+              Wireframing/Prototipagem
+              <div className="bar design">
+                <div style={getWidthStyle("85%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>UI Design</span>
-                <span>90%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "90%", backgroundColor: "#4b5563" }}></div>
+            <li className={getLiClass()}>
+              UI Design
+              <div className="bar design">
+                <div style={getWidthStyle("90%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>UX Research</span>
-                <span>75%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "75%", backgroundColor: "#4b5563" }}></div>
+            <li className={getLiClass()}>
+              UX Design
+              <div className="bar design">
+                <div style={getWidthStyle("75%")} />
               </div>
             </li>
           </ul>
         </div>
 
-        {/* Backend */}
-        <div className="skill-card">
-          <div className="skill-icon">B</div>
-          <h3 className="card-title">Backend</h3>
-          <ul>
-            <li>
-              <div className="skill-row">
-                <span>Node.js</span>
-                <span>65%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "65%", backgroundColor: "#6b7280" }}></div>
-              </div>
-            </li>
-            <li>
-              <div className="skill-row">
-                <span>Python</span>
-                <span>70%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "70%", backgroundColor: "#6b7280" }}></div>
-              </div>
-            </li>
-            <li>
-              <div className="skill-row">
-                <span>SQL</span>
-                <span>75%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "75%", backgroundColor: "#6b7280" }}></div>
-              </div>
-            </li>
-            <li>
-              <div className="skill-row">
-                <span>API REST</span>
-                <span>70%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "70%", backgroundColor: "#6b7280" }}></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
+    
         {/* Ferramentas */}
-        <div className="skill-card">
-          <div className="skill-icon">F</div>
-          <h3 className="card-title">Ferramentas</h3>
+        <div className="skills-column">
+          <h3 className="column-title">
+            <Wrench size={20} /> Ferramentas
+          </h3>
           <ul>
-            <li>
-              <div className="skill-row">
-                <span>Git/GitHub</span>
-                <span>85%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "85%" }}></div>
+            <li className={getLiClass()}>
+              Wordpress
+              <div className="bar tools">
+                <div style={getWidthStyle("85%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>Responsive Design</span>
-                <span>95%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "95%" }}></div>
+            <li className={getLiClass()}>
+              Figma
+              <div className="bar tools">
+                <div style={getWidthStyle("95%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>Tailwind CSS</span>
-                <span>90%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "90%" }}></div>
+            <li className={getLiClass()}>
+              Adobe Illustrator
+              <div className="bar tools">
+                <div style={getWidthStyle("90%")} />
               </div>
             </li>
-            <li>
-              <div className="skill-row">
-                <span>WordPress</span>
-                <span>80%</span>
-              </div>
-              <div className="bar">
-                <div style={{ width: "80%" }}></div>
+            <li className={getLiClass()}>
+              Adobe Photoshop
+              <div className="bar tools">
+                <div style={getWidthStyle("80%")} />
               </div>
             </li>
           </ul>
@@ -190,17 +144,17 @@ function Skills() {
       <div className="learning">
         <h3>Sempre Aprendendo</h3>
         <p>
-          Tecnologias que estou explorando e adicionando ao meu arsenal de conhecimento
+          Estudos e práticas em que estou me aprofundando.
         </p>
         <div className="badges">
-          <span>Vue.js</span>
-          <span>Angular</span>
-          <span>Flutter</span>
-          <span>Docker</span>
-          <span>AWS</span>
-          <span>GraphQL</span>
-          <span>Next.js</span>
-          <span>Svelte</span>
+          <span>Adobe XD</span>
+          <span>Typescript</span>
+          <span>Node.js</span>
+          <span>Design Systems</span>
+          <span>Motion Design</span>
+          <span>Design Thinking</span>
+          <span>UX Research</span>
+          <span>Tailwind CSS	</span>
         </div>
       </div>
     </section>

@@ -1,25 +1,23 @@
 import { Code2, PenTool, Smile, Lightbulb, BookOpen } from 'lucide-react';
+import { motion } from 'framer-motion';
 import './About.css';
 
 export default function About() {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="container">
         {/* Texto da esquerda */}
         <div className="text-area">
           <h2>Sobre Mim</h2>
           <hr />
           <p>
-            Sou uma <strong>estudante de Ciência da Computação</strong> apaixonada por criar experiências digitais que fazem a diferença.
-            Como <strong>Web Designer</strong>, combino criatividade com técnica para desenvolver interfaces que não apenas impressionam visualmente,
-            mas também oferecem uma experiência excepcional ao usuário.
+            Tenho uma abordagem completa para <strong>criar experiências digitais com propósito:</strong> planejo, projeto e desenvolvo interfaces que <strong>funcionam de verdade</strong> — tanto visualmente quanto tecnicamente.
           </p>
           <p>
-            Minha jornada em <strong>UI/UX</strong> me ensinou que o design vai além da estética – é sobre resolver problemas reais e criar conexões significativas entre pessoas e tecnologia.
-            Estou constantemente aprimorando minhas habilidades de programação para transformar conceitos criativos em realidade digital.
+            Atuo desde os primeiros esboços (wireframes e protótipos) até a entrega final, seja com código ou WordPress, aplicando princípios de <strong>UI/UX, SEO e marketing digital desde a base.</strong> Utilizo <strong>metodologias ágeis</strong> para garantir eficiência, alinhamento com o cliente e entregas evolutivas.
           </p>
           <p>
-            Acredito que a melhor tecnologia é aquela que se torna invisível ao usuário, permitindo que eles alcancem seus objetivos de forma natural e intuitiva.
+            Meus projetos são pensados para serem <strong>intuitivos, escaláveis e com foco nos objetivos do negócio.</strong> <strong>Acredito que um bom design vai além da estética:</strong> ele deve <strong>comunicar com clareza, gerar valor e entregar resultados reais.</strong>
           </p>
           <div className="badge">
             <i className="icon">
@@ -42,26 +40,44 @@ export default function About() {
           <div className="card">
             <i className="icon"><PenTool size={18} /></i>
             <h4>Design</h4>
-            <p>Interfaces visuais que encantam e convertem</p>
+            <p>Designs que unem estética, usabilidade e resultado</p>
           </div>
           <div className="card">
             <i className="icon"><Smile size={18} /></i>
             <h4>Experiência do Usuário</h4>
-            <p>Focada em criar jornadas intuitivas e agradáveis</p>
+            <p>Conectando pessoas, objetivos e interfaces com clareza</p>
           </div>
           <div className="card">
             <i className="icon"><Lightbulb size={18} /></i>
             <h4>Inovação</h4>
-            <p>Sempre explorando novas tecnologias e tendências</p>
+            <p>Transformando ideias em soluções criativas e eficazes</p>
           </div>
         </div>
       </div>
 
-      {/* CTA FORA do container, ocupa largura total */}
+      {/* CTA */}
       <div className="cta-area">
-        <h3>Vamos Criar Algo Incrível Juntos?</h3>
-        <p>Estou sempre em busca de novos desafios e oportunidades para aplicar minha paixão por design e tecnologia.</p>
-        <button>Vamos Conversar</button>
+        <h3>Pronto para transformar sua ideia em realidade?</h3>
+        <p>Eu te ajudo a criar interfaces intuitivas e bonitas.</p>
+
+        {/* BOTÃO COM ANIMAÇÃO USANDO FRAMER MOTION */}
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+        <motion.button
+  onClick={() => {
+    const section = document.getElementById("contact");
+    section?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="cta-scan-button"
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.97 }}
+>
+  <span className="glow-text">Começar Projeto</span>
+</motion.button>
+
+
+
+
+        </div>
       </div>
     </section>
   );
