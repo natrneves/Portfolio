@@ -24,12 +24,7 @@ export default function Hero({ onVerProjetosClick }) {
       </div>
 
       <div className="hero-image">
-        <div style={{
-          width: "300px",
-          height: "300px",
-          background: "linear-gradient(#c99bff, #eaeaea)",
-          borderRadius: "2rem"
-        }}></div>
+        <div className="hero-initials">NN</div>
       </div>
     </section>
   );
