@@ -12,12 +12,10 @@ export default function Hero({ onVerProjetosClick }) {
         <p>
           Web Designer & Estudante de Ciência da Computação especializada em UI/UX
         </p>
-        <div className="hero-buttons">
-          <button onClick={onVerProjetosClick}>Ver Meus Projetos</button>
-          <a href="/currículo-nathally.pdf" download>
-         <button>Download CV</button>
-          </a>
-        </div>
+       <div className="hero-buttons">
+  <button onClick={onVerProjetosClick}>Ver Meus Projetos</button>
+  <a href="/currículo-nathally.pdf" download className="btn-secondary">Download CV</a>
+</div>
         <div className="hero-icons">
           <a href="https://github.com/natrneves"><FaGithub /></a>
           <a href="https://www.linkedin.com/in/nathally-neves-482aa6325/"><FaLinkedin /></a>
