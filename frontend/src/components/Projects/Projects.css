@@ -1,9 +1,6 @@
 .projects-section {
   padding: 80px 20px;
-  background: radial-gradient(circle at 20% 40%, #cdb4f5 0%, transparent 50%),
-              radial-gradient(circle at 80% 30%, #b998ec 0%, transparent 50%),
-              radial-gradient(circle at 50% 80%, #c3b1ef 0%, transparent 50%),
-              #d7c1f3;
+  background:#f9f6fe;
   background-blend-mode: screen;
   color: #2e1065;
   text-align: center;
@@ -12,10 +9,7 @@
 .section-title h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: white !important;
-  background: linear-gradient(90deg, #c084fc, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ac8bf0;
 }
 
 .section-title p {
@@ -69,33 +63,17 @@
 
 /* CARD */
 .project-card {
-  min-height: 520px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* Isso força todos os cards a preencherem igualmente */
-  width: 100%;
   min-height: 480px;
-  background: linear-gradient(180deg, #e3d7fa, #d9c4f2);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.project-card {
-  background: linear-gradient(180deg, #e3d7fa, #d9c4f2);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  min-height: 480px;
+  background: linear-gradient(180deg, #ac8bf0 0%, #ffffff 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
