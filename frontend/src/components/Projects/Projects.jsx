@@ -16,6 +16,7 @@ function Projects() {
       tags: ["React", "Java com Springboot", "Figma"],
       img: "/imagens/ProjetoGuido.png",
       emAndamento: false,
+      link: "https://projeto-guido.vercel.app"
     },
     {
       title: "Registro digital de cuidados dos pets",
@@ -24,7 +25,6 @@ function Projects() {
       tags: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
       img: "/imagens/carregando.png",
       emAndamento: true,
-      link: "https://projeto-guido.vercel.app"
     },
     {
       title: "Painel de produtividade para freelancers",
