@@ -24,6 +24,7 @@ function Projects() {
       tags: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
       img: "/imagens/carregando.png",
       emAndamento: true,
+      link: "https://projeto-guido.vercel.app"
     },
     {
       title: "Painel de produtividade para freelancers",
@@ -45,7 +46,7 @@ function Projects() {
     {
       title: "Site Institucional Impulsia",
       description: "Projeto em desenvolvimento para a empresa Impulsia, com objetivo de fortalecer presença digital e facilitar o contato com clientes.",
-      year: 2024,
+      year: 2025,
       tags: ["Wordpress", "CSS", "Figma"],
       img: "/imagens/impulsia.png",
       emAndamento: false,
