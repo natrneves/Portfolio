@@ -148,23 +148,30 @@
 .actions {
   margin-top: auto;
   display: flex;
+  justify-content: center; /* Centraliza */
   gap: 15px;
 }
 
 .btn-primary, .btn-secondary {
-  flex: 1;
-  padding: 12px;
+  padding: 14px 115px; /* Aumenta altura e largura */
+  min-width: 180px;    /* Garante um tamanho mínimo */
   border: none;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;     /* Texto maior */
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
+
+
 
 .btn-primary {
   background: linear-gradient(90deg, #c084fc, #a855f7);
   color: #fff;
+  
 }
 
 .btn-primary:hover {

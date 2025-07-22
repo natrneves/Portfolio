@@ -11,33 +11,46 @@ function Projects() {
   const projects = [
     {
       title: "Projeto Casa Guido",
-      description: "Portal Web de consultas e cadastros de crianças e adolescentes com câncer. Projeto desenvolvido da faculdade de Ciência da Computação. Projeto em andamento.",
+      description: "Portal Web de consultas e cadastros de crianças e adolescentes com câncer. Projeto desenvolvido da faculdade de Ciência da Computação. Projeto finalizado.",
       year: 2025,
       tags: ["React", "Java com Springboot", "Figma"],
       img: "/imagens/ProjetoGuido.png",
+      emAndamento: false,
     },
     {
-      title: "App gamificado de leitura",
-      description: "Plataforma para organizar livros lidos, em leitura e desejados, com recompensas visuais que incentivam o hábito de leitura. Projeto em andamento.",
-      year: 2025,
-      tags: ["Figma", "Mobile UI", "Prototipação"],
-      img: "/imagens/carregando.png",
-    },
-     {
       title: "Registro digital de cuidados dos pets",
       description: "Interface para tutores cadastrarem consultas, vacinas e alertas, com exportação em PDF para envio ao veterinário. Projeto em andamento",
       year: 2025,
       tags: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
       img: "/imagens/carregando.png",
-    }
-    ,
+      emAndamento: true,
+    },
     {
       title: "Painel de produtividade para freelancers",
       description: "Projeto pessoal para desenvolver uma interface para freelances acompanharem tarefas, prazos, horas trabalhadas e pagamentos. Protótipo em desenvolvimento",
       year: 2025,
       tags: ["React", "CSS", "Figma", "Node.js"],
       img: "/imagens/carregando.png",
+      emAndamento: true,
     },
+    {
+      title: "Site Institucional Dev4u",
+      description: "Site institucional desenvolvido para a empresa Dev4u com foco em apresentação de serviços, contato e identidade visual profissional.",
+      year: 2024,
+      tags: ["Wordpress", "CSS", "Figma"],
+      img: "/imagens/site.png",
+      emAndamento: false,
+      link: "https://dev4u.com.br",
+    },
+    {
+      title: "Site Institucional Impulsia",
+      description: "Projeto em desenvolvimento para a empresa Impulsia, com objetivo de fortalecer presença digital e facilitar o contato com clientes.",
+      year: 2024,
+      tags: ["Wordpress", "CSS", "Figma"],
+      img: "/imagens/impulsia.png",
+      emAndamento: false,
+      link: "https://wp.impulsia.com.br",
+    }
   ];
 
   const handleShowModal = () => {
@@ -87,9 +100,20 @@ function Projects() {
                   ))}
                 </div>
                 <div className="actions">
-                  <button className="btn-primary" onClick={handleShowModal}>
-                    Ver Projeto
-                  </button>
+                  {project.emAndamento ? (
+                    <button className="btn-primary" onClick={handleShowModal}>
+                      Ver Projeto
+                    </button>
+                  ) : (
+                    <a
+                      className="btn-primary"
+                      href={project.link || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver Projeto
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
