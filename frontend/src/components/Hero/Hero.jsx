@@ -10,7 +10,7 @@ export default function Hero({ onVerProjetosClick }) {
         <span className="status">Disponível para novos projetos</span>
         <h1>Olá, eu sou <strong>Nathally</strong></h1>
         <p>
-          Web Designer & Estudante de Ciência da Computação especializada em UI/UX
+          Designer & Estudante de Ciência da Computação especializada em UI/UX
         </p>
        <div className="hero-buttons">
   <button onClick={onVerProjetosClick}>Ver Meus Projetos</button>

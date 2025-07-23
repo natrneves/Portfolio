@@ -42,7 +42,7 @@ function Skills() {
         {/* Frontend */}
         <div className="skills-column">
           <h3 className="column-title">
-            <Code size={20} /> Frontend
+            <Code size={20} /> Web Design
           </h3>
           <ul>
             <li className={getLiClass()}>
@@ -79,7 +79,7 @@ function Skills() {
           </h3>
           <ul>
             <li className={getLiClass()}>
-              Design Visual
+              Design Gráfico
               <div className="bar design">
                 <div style={getWidthStyle("95%")} />
               </div>
