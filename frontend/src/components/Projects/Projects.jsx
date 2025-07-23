@@ -11,7 +11,7 @@ function Projects() {
   const projects = [
     {
       title: "Projeto Casa Guido",
-      description: "Plataforma web criada para apoiar o atendimento de crianças e adolescentes em tratamento oncológico. Desenvolvido durante o curso de Ciência da Computação com foco em impacto social. Projeto concluído.",
+      description: "Sistema web desenvolvido para gerenciamento de cadastros e consultas de pacientes oncológicos pediátricos. Projeto realizado na graduação em Ciência da Computação.",
       year: 2025,
       tags: ["React", "Java com Springboot", "Figma"],
       img: "/imagens/ProjetoGuido.png",
