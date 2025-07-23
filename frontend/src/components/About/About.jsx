@@ -10,15 +10,11 @@ export default function About() {
         <div className="text-area">
           <h2>Sobre Mim</h2>
           <hr />
-          <p>
-            Tenho uma abordagem completa para <strong>criar experiências digitais com propósito:</strong> planejo, projeto e desenvolvo interfaces que <strong>funcionam de verdade</strong> — tanto visualmente quanto tecnicamente.
-          </p>
-          <p>
-            Atuo desde os primeiros esboços (wireframes e protótipos) até a entrega final, seja com código ou WordPress, aplicando princípios de <strong>UI/UX, SEO e marketing digital desde a base.</strong> Utilizo <strong>metodologias ágeis</strong> para garantir eficiência, alinhamento com o cliente e entregas evolutivas.
-          </p>
-          <p>
-            Meus projetos são pensados para serem <strong>intuitivos, escaláveis e com foco nos objetivos do negócio.</strong> <strong>Acredito que um bom design vai além da estética:</strong> ele deve <strong>comunicar com clareza, gerar valor e entregar resultados reais.</strong>
-          </p>
+          <p>Crio experiências digitais com propósito: planejo, projeto e desenvolvo interfaces que funcionam.</p>
+<p>Atuo desde os primeiros esboços até a entrega final, seja com código ou WordPress, aplicando princípios de <strong>UI/UX, SEO e marketing digital desde a base.</strong> Utilizo <strong>metodologias ágeis</strong> para garantir eficiência, alinhamento com o cliente e entregas evolutivas.</p>
+<p>Além do digital, também trabalho com design gráfico, desenvolvendo peças para redes sociais, identidade visual e materiais de comunicação que fortalecem a presença da marca.</p>
+<p>Acredito que um bom design vai além da estética: <strong>ele deve comunicar com clareza, gerar valor e entregar resultados reais.</strong></p>
+
           <div className="badge">
             <i className="icon">
               <BookOpen size={18} />
